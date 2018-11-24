@@ -7,6 +7,21 @@
  
 <body>
   <script>
+   var request = new XMLHttpRequest();
+   request.open('GET', "https://proximyst.com/owostatusstatus", true);
+   request.send();
+   
+   request.onreadystatechange = processRequest;
+   
+   function processRequest(e) {
+    if (request.readyState == 4 && request.status == 200) {
+     //lol wtf
+     print("meme");
+    }
+    else {
+     print("naynay");
+    }
+   }
   </script>
 </body>
 
