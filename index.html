@@ -14,7 +14,7 @@
    request.onreadystatechange = processRequest;
    
    function processRequest(e) {
-    if (request.status == 200) {
+    if (request.status >= 200 && request.status <= 304) {
      //lol wtf
      alert("It's up !! I'm too lazy to write something on the page so this has to be enough :)");
     }
